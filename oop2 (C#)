@@ -1,0 +1,57 @@
+using System;
+
+namespace ConsoleApp9
+{
+    struct date
+    {
+        private byte day;
+        private string month;
+        private ushort year;
+    }
+    class Employee
+    {
+        private int Id;
+        private string name;
+        private date joiningdate;
+        private double salary;
+        public void SetId (int Id)
+        {
+            this.Id = Id;
+         }
+        public int GetId ()
+        {
+            return this.Id = Id;
+        }
+        public void SetName(string name)
+        {
+            this.name = name;
+        }
+        public string GetName ()
+        {
+            return this.name = name;
+        }
+        public void SetDate(date joingdate)
+        {
+            this.joiningdate = joiningdate;
+        }
+        public date GetDate ()
+        {
+            return this.joiningdate = joiningdate;
+        }
+        public void SetSalary (double salary)
+        {
+            this.salary = salary;
+        }
+        public double Getsalary()
+        {
+            return this.salary = salary;
+        }
+        public  void PrintInformation()
+        {
+            Console.WriteLine("id{0}, name{1}, joingdate{2}, salary{3}",0,1,2,3);
+            
+
+        }
+        }
+    }
+
