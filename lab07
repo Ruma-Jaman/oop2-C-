@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleAppInheritanceA
+{
+    internal struct DateFormate
+    {
+        private byte day;
+        private byte month;
+        private ushort year;
+       
+
+    internal DateFormate (byte day, byte month, ushort year)
+        {
+            this.day = day;
+            this.month=month;
+            this.year = year;
+            
+        }
+
+        public void PrintDate()
+        {
+            Console.WriteLine("Day: {0}", this.day);
+            Console.WriteLine("Month: {0}", this.month);
+            Console.WriteLine("Year: {0}", this.year);
+        }
+    }
+
+    internal class Account
+    {
+        private int id;
+        private string name;
+        private string blance;
+        private DateFormate Openingdate;
+
+        internal int Id
+        {
+            get { return this.id; }
+            set { this.id = value; }
+        }
+
+        internal string Name
+        {
+            get { return this.name; }
+            set { this.name = value; }
+        }
+
+        internal string blance
+        {
+            get { return this.blance; }
+            set { this.blance = value; }
+        }
+
+        internal DateFormate date
+    {
+            get { return this.date; }
+            set { this.date = value; }
+        }
+
+        public Account(int id, string name, string blance, DateFormate date)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Blance = blance;
+            this.OpeningDate = Openingdate;
+        }
+
+        public virtual void ShowInfo()
+        {
+            Console.WriteLine("Id: {0}", this.Id);
+            Console.WriteLine("Name: {0}", this.Name);
+            Console.WriteLine($"Blance: {this.Blance}");
+            Console.WriteLine("Opening Date: ");
+            this.Openingdate.PrintDate();
+            Console.WriteLine();
+        }
+    }
+}
